@@ -54,7 +54,7 @@ function card(label = "", description = "", anchor = "", target) {
     div.appendChild(h3);
     div.appendChild(img);
     div.appendChild(p);
-    document.getElementById(target).appendChild(anchorEl);
+    document.getElementById(target).appendChild(anchorEl); 
 }
 
 function renderCards() {
