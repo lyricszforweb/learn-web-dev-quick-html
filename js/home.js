@@ -64,7 +64,7 @@ function renderCards() {
     const linkC = './' + lang + '_learn';
 
     card('Learn', 'Continue your learning path', linkC, 'target');
-    card('Community', 'Join our vibrant community', '', 'target');
+    card('Community', 'Join our vibrant community', 'https://t.me/+i4XY6BBWyoQwZWNk', 'target');
     card('Settings', 'Customize the app to suit your needs', '', 'target');
     card('About', 'About the app and the developers', '', 'target');
     card('Exit', 'Exit the app', '', 'target');
