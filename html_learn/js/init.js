@@ -4,6 +4,8 @@ import { lessonGenerator } from "./../../js/functions_exp.js";
 
 let h = document.createElement("iframe");
 
+fullScreenAd.style.display = "none"
+
 let currentLesson = window.localStorage.getItem("learnWebDevQuickLessonsDone")
 
 const currentDateObj = new Date()
@@ -17,8 +19,6 @@ const dateNow = Number(String(currentDateObj.getFullYear()) + (calculatePrevMont
 let lastDate = Number(window.localStorage.getItem("learnWebDevQuickLastDate"));
 
 streakIndex += Number(String(dateNow).slice(0, 4)) - Number(String(lastDate).slice(0, 4))
-
-console.log(streakIndex);
 
 
 const streak = window.localStorage.getItem("learnWebDevQuickStreakCount");
@@ -56,7 +56,6 @@ async function lockOrientation() {
   try {
     // You must be in fullscreen first
     await screen.orientation.lock('landscape');
-    console.log("Orientation locked to landscape");
   } catch (error) {
     console.error("Orientation lock failed: ", error);
   }

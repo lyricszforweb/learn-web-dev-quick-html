@@ -289,7 +289,7 @@ class Engine {
             this.object = []
             this.text()
             this.lessonsDoneToday++;
-            if (this.lessonsDoneToday % 1 == 0) {
+            if (this.lessonsDoneToday % 4 == 0) {
                 this.showAd()
             }
         }
