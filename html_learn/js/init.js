@@ -4,8 +4,6 @@ import { lessonGenerator } from "./../../js/functions_exp.js";
 
 let h = document.createElement("iframe");
 
-showAd()
-
 let currentLesson = window.localStorage.getItem("learnWebDevQuickLessonsDone")
 
 const currentDateObj = new Date()
@@ -67,8 +65,8 @@ async function lockOrientation() {
 startBtn.onclick = () => {
     startBtn.style.display = "none";
 
-    // startFullscreen();
-    // lockOrientation();
+    startFullscreen();
+    lockOrientation();
 
 }
 

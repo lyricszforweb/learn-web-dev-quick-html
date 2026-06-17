@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Independent Video Ad Player</title>
+
+    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
     
     <!-- Video.js Framework Assets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.0.0/video-js.min.css" integrity="sha512-zki7IiwYvLzVZouKA+V/vtIuW7cK8M2ug1kaRBItuBWG8TDvA6jrtjhKPOrz3RFGpt9OQC/xE7DUfsrHxoBXxg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
@@ -59,7 +62,8 @@
 
 <script>
     // 1. Define your VAST Tag URL directly 
-    const VAST_TAG_URL = "https://expensive-pollution.com/dmmgF.zCdvGDNJvJZaGNUj/ge_mE9ou/ZOUnlDkTP/TYcyxDNUD/QcyJN/j/U/tqNvz/Ev0FN/DYIQ2sOWSlZtsda/WH1JpPdJDv0Wxg";
+    const VAST_TAG_URL = ["https://expensive-pollution.com/dmmgF.zCdvGDNJvJZaGNUj/ge_mE9ou/ZOUnlDkTP/TYcyxDNUD/QcyJN/j/U/tqNvz/Ev0FN/DYIQ2sOWSlZtsda/WH1JpPdJDv0Wxg",
+    "https://youradexchange.com/video/select.php?r=11470838"][Math.floor(Math.random() * 2)]
 
     // 2. Initialize the Video.js Player
     const player = videojs('my-local-player');
