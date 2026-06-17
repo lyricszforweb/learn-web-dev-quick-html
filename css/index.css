@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    overflow-x: hidden;
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        max-width: 905px;
+        margin: auto;
+    }
+}
+
+header, main {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 8pt;
+    background-color: black;}
+
+::-webkit-scrollbar-thumb {
+    background: repeating-linear-gradient(45deg, rgb(199, 159, 83), rgba(179, 24, 24, 0.684) 20%);
+    border-radius: 20pt;
+    box-shadow: 0px 20px 10px rgb(255, 255, 255);
+    filter: drop-shadow(0px 0px 20px pink inset);
+}
+
+body {
+    background: linear-gradient(gray, pink, tomato);
+    background-attachment: fixed;
+    color: rgb(87, 17, 0);
+    text-align: center;
+}
+
+p {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 10px 10px rgba(2, 30, 114, 0.611);
+}
+
+h1, h2, h3 {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    color: wheat;
+    text-shadow: 1px 1px 1px gray;
+    letter-spacing: 3px;
+}
+
+p , label{
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+#language, #language:focus, #language:active {
+    background-color: transparent !important;
+    border: none;
+    outline: none !important;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.364);
+    padding: 4px;
+    margin-left: 10px;
+    color: white;
+}
+
+#language option {
+    background-color: gray !important;
+}
+
+#target {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-content: center;
+    justify-items: center;
+    grid-gap: 10px;
+    justify-self: center;
+    width: 100%;
+    margin: auto;
+}
+
+#target a {
+    position: relative;
+    aspect-ratio: 10/10;
+    background-color: gray;
+    transition: filter .02s ease-in-out;
+    border-radius: 20px;
+    padding: .5vw;
+}
+
+#target a:hover , #language:hover{
+    filter: brightness(1.2);
+}
+
+#target a:nth-child(1), #target a:nth-child(5){
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: pink !important;
+}
+
+.card h3 {
+    padding: 4px;
+    background-color: rgba(160, 11, 11, 0.574);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px 2px 2px gray;
+    font-size: x-large;
+}
+
+.card p {
+    position: absolute;
+    bottom: 10%;
+    word-wrap: break-word;
+    width: 100%;
+    padding: 3px;
+    font-style: italic;
+    font-variant: small-caps;
+    color: black;
+    text-shadow: 2px 2px 2px gray;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    border: none;
+
+}
+
+canvas {
+    width: 30%;
+    aspect-ratio: 4/4;
+    max-width: 500px;
+    background-color: green;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Full-screen loading overlay with fade transition */
+#loading {
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.1;
+    transition: opacity 300ms ease;
+    z-index: 9999;
+}
+
+/* Hidden state used by JS to fade the loader out */
+.loader-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#loading input[type="range"]{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

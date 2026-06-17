@@ -1,0 +1,105 @@
+@keyframes leave {
+    15%{
+        opacity: 1;
+        
+    }
+    18% {
+        opacity: 0;
+        display: none;
+        left: 110vw;
+    }
+
+    99%{
+        opacity: 0;
+        left: 110vw;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    user-select: none;
+}
+
+#percentage {
+    opacity: 0;
+    position: fixed;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: larger;
+    background: radial-gradient(white, silver);
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px gray, 0 2px 9px gold inset;
+    text-shadow: 1px 1px 1px gray;
+    letter-spacing: 110%;
+    transition: all 2s .3s ease-in-out;
+    border-left: 2px dashed red;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9;
+}
+
+#startBtn {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    font-size: xx-large;
+    outline: none;
+    border: none;
+}
+
+#progress {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    font-size: xx-large;
+    z-index: -2;
+}
+
+#scrollAd {
+    width: 200px;
+    aspect-ratio: 16 / 9;
+    z-index: 100;
+    outline: none;
+    border: none;
+    max-height: 7vh;
+    animation: leave linear infinite 120s;
+    opacity: 0.4;
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#fullScreenAd {
+    width: 100vw;
+    height: 100vh;
+    z-index: 105;
+    position: fixed;
+    background-color: gray;
+}
+
+#fullScreenAd iframe {
+    width: 100%;
+    height: 100%;
+}
